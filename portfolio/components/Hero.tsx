@@ -11,7 +11,7 @@ const Hero = (props: Props) => {
 
     return (
         <div className={css.scene}>
-            <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+            <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden relative">
                 <div className="top-50 text-white absolute z-10">
                     <div className="">
                         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">Software engineer</h2>
