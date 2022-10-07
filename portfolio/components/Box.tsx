@@ -11,7 +11,7 @@ const Box = (props:ThreeElements['mesh']) => {
     useFrame((state, delta) => ( mesh.current.rotation.x = 100,  mesh.current.rotation.y = 100,  mesh.current.rotation.z += .03))
 
     const imgProps = useTexture({
-        map: "/_next/static/media/map.fcec4c14.jpg"
+        map: "./_next/static/media/map.fcec4c14.jpg"
     })
 
     return (
