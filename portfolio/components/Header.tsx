@@ -74,7 +74,7 @@ function Header({darkMode, setDarkMode}: Props) {
 
                 }
 
-                <button className="border border-blue-400  px-6 py-2 uppercase hidden md:inline-flex text-sm md:text-md text-white"><a href="https://tishtanya-shaw.netlify.app/static/media/Tishtanya-Shaw-resume.docx.d848118d8ad479668b26.pdf" target="
+                <button className={` px-6 py-2 uppercase hidden md:inline-flex text-sm md:text-md hover:text-[#F7ABBA] ${darkMode ? 'border border-white rounded-lg text-white' : 'bg-white text-gray-400 rounded-lg '}`}><a href="https://tishtanya-shaw.netlify.app/static/media/Tishtanya-Shaw-resume.docx.d848118d8ad479668b26.pdf" target="
                 _blank">Resume</a></button>
             </motion.div>
         </header>
