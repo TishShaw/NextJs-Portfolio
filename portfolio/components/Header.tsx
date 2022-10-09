@@ -1,17 +1,15 @@
 import React, { Dispatch } from 'react'
 import {SocialIcon} from 'react-social-icons'
 import {motion} from 'framer-motion'
-import Link from 'next/link'
-
-// import resume from '../public/images/_Tishtanya-Shaw-resume.pdf'
+import { Social } from '../typings'
 
 type Props = {
     darkMode: Boolean,
     setDarkMode: Dispatch<SetStateAction<boolean>>
+    socials: Social[]
 }
 
-function Header({darkMode, setDarkMode}: Props) {
-    // console.log(resume)
+function Header({darkMode, setDarkMode, socials}: Props) {
     return (
         <header className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto p-5 z-20 xl:items-center">
             <motion.div
@@ -30,16 +28,16 @@ function Header({darkMode, setDarkMode}: Props) {
             }}
             className="flex flex-row items-center">
                 {/* Social Icons */}
-                <SocialIcon 
-                    url="https://github.com/TishShaw"
-                    fgColor="white"
-                    bgColor="transparent"
-                />
-                <SocialIcon 
-                    url="https://www.linkedin.com/in/tishtanya-shaw/"
-                    fgColor="white"
-                    bgColor="transparent"
-                />
+                {
+                    socials.map((social) => (
+                        <SocialIcon 
+                            key={social._id}
+                            url={social.url}
+                            fgColor="white"
+                            bgColor="transparent"
+                        />
+                    ))
+                }
                 <a href="mailto:Tishtanya.shaw24@gmail.com" target="_blank" rel="noreferrer">
                         <SocialIcon
                         fgColor="white"
