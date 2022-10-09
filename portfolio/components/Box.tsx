@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { useTexture } from "@react-three/drei"
 import { useFrame, ThreeElements } from '@react-three/fiber'
+import img from '../public/map.jpg'
 
 type Props = {}
 
@@ -14,6 +15,10 @@ const Box = (props:ThreeElements['mesh']) => {
         map: "./_next/static/media/map.fcec4c14.jpg"
     })
 
+
+    if(!img) {
+        return 
+    }
     return (
         <mesh
             {...props}
