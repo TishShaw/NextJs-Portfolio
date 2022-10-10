@@ -8,7 +8,6 @@ import Link from 'next/link';
 type Props = {}
 
 const Hero = (props: Props) => {
-
     return (
         <div className={css.scene}>
             <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden relative">
@@ -32,7 +31,6 @@ const Hero = (props: Props) => {
                     </span>
                     <div className="">
                         <Link href="#about"><button className="heroBtn">About</button></Link>
-                        <Link href="#experience"><button className="heroBtn">Experience</button></Link>
                         <Link href="#skills"><button className="heroBtn">Skills</button></Link>
                         <Link href="#projects"><button className="heroBtn">Projects</button></Link>
                     </div>
@@ -45,7 +43,7 @@ const Hero = (props: Props) => {
                         }}
                     >
                         <ambientLight />
-                        <Box  />
+                        {/* <Box  /> */}
                     </Canvas>
             </div>
         </div>

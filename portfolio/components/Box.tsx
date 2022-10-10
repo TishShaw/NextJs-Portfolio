@@ -15,6 +15,10 @@ const Box = (props:Props): JSX.Element => {
         map: "./_next/static/media/map.fcec4c14.jpg"
     })
 
+
+    if(!imgProps) {
+        console.log(imgProps)
+    }
     return (
         <>
             <mesh
