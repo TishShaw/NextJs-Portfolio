@@ -33,6 +33,7 @@ const Hero = (props: Props) => {
                         <Link href="#about"><button className="heroBtn">About</button></Link>
                         <Link href="#skills"><button className="heroBtn">Skills</button></Link>
                         <Link href="#projects"><button className="heroBtn">Projects</button></Link>
+                        <Link href="#contact"><button className="heroBtn">Contact</button></Link>
                     </div>
                 </div>
                     <Canvas
