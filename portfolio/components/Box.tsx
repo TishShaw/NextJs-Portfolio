@@ -6,7 +6,7 @@ import img from '../public/map.jpg'
 
 type Props = {}
 
-const Box = (props:ThreeElements['mesh']) => {
+const Box = (props:Props): JSX.Element => {
     const mesh = useRef<THREE.Mesh>(null!)
 
     useFrame((state, delta) => ( mesh.current.rotation.x = 100,  mesh.current.rotation.y = 100,  mesh.current.rotation.z += .03))
@@ -15,19 +15,17 @@ const Box = (props:ThreeElements['mesh']) => {
         map: "./_next/static/media/map.fcec4c14.jpg"
     })
 
-
-    if(!img) {
-        return 
-    }
     return (
-        <mesh
-            {...props}
-            ref={mesh}
-            scale={2}>
-            <torusGeometry args={[2, .2, 16, 100]}  />
-            <pointLight position={[2, 3, 4]} />
-            <meshStandardMaterial  {...imgProps} />
-        </mesh>
+        <>
+            <mesh
+                {...props}
+                ref={mesh}
+                scale={2}>
+                <torusGeometry args={[2, .2, 16, 100]}  />
+                <pointLight position={[2, 3, 4]} />
+                <meshStandardMaterial  {...imgProps} />
+            </mesh>
+        </>
     )
 }
 

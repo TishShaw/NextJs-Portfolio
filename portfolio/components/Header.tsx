@@ -1,12 +1,12 @@
-import React, { Dispatch } from 'react'
+import React from 'react'
 import {SocialIcon} from 'react-social-icons'
 import {motion} from 'framer-motion'
 import { Social } from '../typings'
-import { FiMail } from 'react-icons'
+
 
 type Props = {
-    darkMode: Boolean,
-    setDarkMode: Dispatch<SetStateAction<boolean>>
+    darkMode: Boolean
+    setDarkMode: (isDark: boolean) => void
     socials: Social[]
 }
 
